@@ -1,0 +1,6 @@
+# hosts table for dnsmasq
+{% if dnsmasq_hosts is defined %}
+{% for it in dnsmasq_hosts %}
+{{ it.inner_ip }} {{it.host_name}}
+{% endfor %}
+{% endif %}
